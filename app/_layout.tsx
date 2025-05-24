@@ -1,17 +1,24 @@
 import { Stack } from "expo-router";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function RootLayout() {
-  return( <Stack>
+  return (
     <SafeAreaProvider>
-      <SafeAreaView style={{flex:1}}>
-        <Stack.Screen name="Home" options={{title: "Home"}}/>
-        <Stack.Screen name="Products" options={{title: "Products"}}/>
-        <Stack.Screen name="Analysis" options={{title: "Analysis"}}/>
-        <Stack.Screen name="Logs" options={{title: "Logs"}}/>
-        <Stack.Screen name="Account" options={{title: "Account"}}/>
-      </SafeAreaView>
+      <Stack
+        screenOptions={{
+          headerShown: true,
+          headerStyle: {
+            backgroundColor: "#f0e4d4",
+            height: 100,
+          },
+          headerTintColor: "black",
+          headerTitleStyle: {
+            fontWeight: "bold",
+            fontSize: 20,
+          },
+          headerTitleAlign: "center",
+        }}
+      />
     </SafeAreaProvider>
-  </Stack>
-);
+  );
 }

@@ -4,16 +4,21 @@
     "slug": "E-rekord",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/ios-light.png",
     "scheme": "erekord",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "icon":{
+        "light": "./assets/images/ios-light.png",
+        "dark": "./assets/images/ios-dark.png",
+        "tinted": "./assets/images/ios-tinted.png"
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/adaptive-icon-er.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true
@@ -28,10 +33,15 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
+          "backgroundColor": "#ffffff",
+          "image": "./assets/images/splash-icon-dark.png",
+          "dark":{
+            "image": "./assets/images/splash-icon-light.png",
+            "backgroundColor": "#000000"
+          },
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "imageWidth": 200
+          
         }
       ]
     ],
