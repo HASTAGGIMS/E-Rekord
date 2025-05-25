@@ -1,9 +1,13 @@
-import { COLORS } from "@/constants/Themes"
-import { Ionicons } from "@expo/vector-icons"
-import { Tabs } from 'expo-router'
+import { COLORS } from "@/constants/Themes";
+import { Ionicons } from "@expo/vector-icons";
+import { Tabs } from 'expo-router';
+import { View } from "react-native";
+import Header from "../components/header";
 
 export default function tabLayout() {
   return (
+    <View style={{ flex: 1 }}>
+      <Header />
     <Tabs
       screenOptions={{
       headerShown: false,
@@ -18,14 +22,14 @@ export default function tabLayout() {
       <Tabs.Screen 
         name='Home'
         options={{
-          tabBarIcon: ({size,color})=> <Ionicons name="home" size={size} color={color}/>
+          tabBarIcon: ({size,color})=> <Ionicons name="home-outline" size={size} color={color}/>
         }}
       />
 
       <Tabs.Screen 
         name='Products'
         options={{
-          tabBarIcon: ({size,color})=> <Ionicons name="bag" size={size} color={color}/>
+          tabBarIcon: ({size,color})=> <Ionicons name="bag-outline" size={size} color={color}/>
         }}
       />
 
@@ -42,6 +46,28 @@ export default function tabLayout() {
           tabBarIcon: ({size,color})=> <Ionicons name="stats-chart-outline" size={size} color={color}/>
         }}
       />
+
+      <Tabs.Screen
+        name="account"
+        options={{
+        href: null 
+        }}
+      />
+
+      <Tabs.Screen
+        name="settings"
+        options={{
+        href: null 
+        }}
+      />
+
+      <Tabs.Screen
+        name="notification"
+        options={{
+        href: null 
+        }}
+      />
     </Tabs>
+  </View>
   )
 }

@@ -10,10 +10,6 @@ export default function Index() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        paddingTop: insets.top,
-        paddingBottom: insets.bottom,
-        paddingLeft: insets.left,
-        paddingRight: insets.right,
         backgroundColor: '#f5f5f0'
       }
       }

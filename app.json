@@ -1,5 +1,11 @@
 {
   "expo": {
+    "androidStatusBar": {
+      "hidden": true,
+      "translucent": true
+    },
+    "androidNavigationBar": {
+      "visible": "immersive"},
     "name": "E-rekord",
     "slug": "E-rekord",
     "version": "1.0.0",
