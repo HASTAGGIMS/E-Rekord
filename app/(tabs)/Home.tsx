@@ -1,36 +1,26 @@
-import { Image, Text, TouchableOpacity, View } from "react-native";
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { styles } from "../../auth.styles";
+import { SignOutButton } from '@/app/components/SignOutButton';
+import { SignedIn, SignedOut, useUser } from '@clerk/clerk-expo';
+import { Link } from 'expo-router';
+import { Text, View } from 'react-native';
 
-export default function Index() {
-  const insets = useSafeAreaInsets();
+export default function HomePage() {
+  const { user } = useUser();
+
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: '#f5f5f0'
-      }
-      }
-    >
-
-    <Text style={styles.title}>HELLO</Text>
-    
-    <TouchableOpacity onPress={() =>alert("Gegege")}>
-      <Text>Hikapa ge</Text>
-    </TouchableOpacity>
-
-    <Image 
-      source ={require("../../assets/images/adaptive-icon-er.png")}
-      style={{
-        height: 400,
-        width:400
-      }}
-    />
-
-    
-    
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <SignedIn>
+        <Text>Welcome {user?.emailAddresses[0]?.emailAddress}</Text>
+        <SignOutButton />
+      </SignedIn>
+      <SignedOut>
+        <Link href="/(auth)/login">
+          <Text style={{ color: 'blue' }}>Sign in</Text>
+        </Link>
+        <Text> or </Text>
+        <Link href="/(auth)/signup">
+          <Text style={{ color: 'blue' }}>Sign up</Text>
+        </Link>
+      </SignedOut>
     </View>
   );
 }
