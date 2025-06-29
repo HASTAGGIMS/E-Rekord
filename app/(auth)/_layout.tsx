@@ -1,22 +1,10 @@
-import { useAuth } from '@clerk/clerk-expo';
-import { Redirect, Stack } from 'expo-router';
-import { StatusBar } from 'react-native';
+import { Stack } from 'expo-router';
 
-export default function AuthRoutesLayout() {
-  const { isSignedIn } = useAuth();
-
-  if (isSignedIn) {
-    return <Redirect href={'/'} />;
-  }
-
+export default function AuthLayout() {
   return (
-    <>
-      <StatusBar hidden={true} />
-      <Stack 
-      screenOptions={{
-    headerShown: false,
-    animation: 'fade'
-  }}/>
-    </>
+    <Stack>
+      <Stack.Screen name="login" options={{ headerShown: false }} />
+      {/* Add other auth screens */}
+    </Stack>
   );
 }

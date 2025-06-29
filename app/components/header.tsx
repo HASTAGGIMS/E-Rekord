@@ -8,32 +8,33 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { COLORS } from '../../constants/Themes';
+
 
 export default function Header() {
   const router = useRouter();
   return (
     <SafeAreaView style={styles.safe}>
       <View style={styles.container}>
-        {}
-        <Image
-          source={require('../../assets/images/adaptive-icon-er.png')} 
-          style={styles.logo}
-          resizeMode="contain"
-        />
+        <View style={styles.logoContainer}>
+                  <Image source={require('../../assets/images/adaptive-icon-er.png')}
+                          style={{width:120, height:120}}
+                          resizeMode="contain"/>
+                </View>
 
         { }
         <View style={styles.rightControls}>
           <View style={styles.rightControls}>
           <TouchableOpacity onPress={() => router.push('/(tabs)/settings')}>
-            <Ionicons name="settings-outline" size={24} color="#18746c" />
+            <Ionicons name="settings-outline" size={24} color= {COLORS.secondary} />
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => router.push('/(tabs)/notification')}>
-            <Ionicons name="notifications-outline" size={28} color="#18746c" />
+            <Ionicons name="notifications-outline" size={28} color={COLORS.secondary} />
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => router.push('/(tabs)/account')}>
-            <Ionicons name="person-circle-outline" size={28} color="#18746c" />
+            <Ionicons name="person-circle-outline" size={28} color={COLORS.secondary} />
           </TouchableOpacity>
           
           </View>
@@ -45,16 +46,16 @@ export default function Header() {
 
 const styles = StyleSheet.create({
   safe: {
-    backgroundColor: '#f5f5f0',
+    backgroundColor: COLORS.primary,
   },
   container: {
     height: 90,
     paddingHorizontal: 16,
-    paddingLeft: 0,
+    paddingLeft: 30,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingTop: 0
+    paddingTop: 20
   },
   logo: {
     width: 100,
@@ -62,7 +63,18 @@ const styles = StyleSheet.create({
   },
   rightControls: {
     flexDirection: 'row',
-    gap: 16, 
+    gap: 16,
+    paddingBottom:10
   },
+
+  logoContainer:{
+    width: 60,
+          height: 60,
+          borderRadius: 18,
+          backgroundColor: COLORS.background,
+          justifyContent: "center",
+          alignItems: "center",
+          marginBottom: 20,
+  }
   
 });

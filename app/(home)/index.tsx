@@ -1,5 +1,5 @@
-import { SignOutButton } from '@/app/components/SignOutButton'
 import { SignedIn, SignedOut, useUser } from '@clerk/clerk-expo'
+import { SignOutButton } from 'app/components/SignOutButton'
 import { Link } from 'expo-router'
 import { Text, View } from 'react-native'
 
@@ -16,7 +16,7 @@ export default function Page() {
         <Link href="/(auth)/login">
           <Text>Sign in</Text>
         </Link>
-        <Link href="/(auth)/signup">
+        <Link href="/(auth)/login">
           <Text>Sign up</Text>
         </Link>
       </SignedOut>

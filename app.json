@@ -54,8 +54,5 @@
     "experiments": {
       "typedRoutes": true
     }
-  },
-  "cli": {
-  "clean": false
-}
+  }
 }

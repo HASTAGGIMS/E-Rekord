@@ -104,13 +104,13 @@ const {width, height} = Dimensions.get("window");
 
 
   input: {
-    height: 50,
+    height: 30,
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: COLORS.primary,
     borderRadius: 8,
     paddingHorizontal: 15,
+    paddingVertical: 0,
     marginBottom: 20,
-    fontSize: 16,
     backgroundColor: '#f9f9f9',
   },
   continueButton: {
@@ -199,6 +199,151 @@ signUpContainer: {
     fontSize: 16,
     color: '#666',
   },
+
+  modal:{
+    margin: 20,
+    backgroundColor: COLORS.secondary,
+    borderRadius: 10,
+    padding: 35,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+    width: 300, 
+    height: 400,
+    
+  },
+
+  modalView:{
+    flex: 1,
+    paddingTop: 20,
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    
+  },
+
+  modalButton:{
+    backgroundColor: COLORS.primary,
+    height: 45,
+    borderRadius: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    
+    elevation: 2, // for Android shadow
+    shadowColor: '#000', // for iOS shadow
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    position: 'absolute',
+    top: 330
+  },
+
+  addPhoto:{
+    backgroundColor: COLORS.secondary,
+    height: 40,
+    width: 40,
+    borderRadius: 24,
+    borderColor: COLORS.primary,
+    borderWidth: 1.5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    
+    elevation: 2, 
+    shadowColor: '#000', 
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    position: 'absolute',
+    top: 90,
+    left: 170
+  },
+
+  addPhotoImage:{
+    position: 'absolute',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 100,
+    width: 100,
+    top: 20,
+    borderRadius: 8,
+    borderColor: COLORS.primary,
+    borderWidth: 1.5,
+
+  },
+
+  addPhotoText:{
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    top: 33
+  },
+
+  alternateModalButton:{
+    backgroundColor: COLORS.secondary,
+    height: 45,
+    borderRadius: 8,
+    borderWidth: 1.5,
+    borderColor: COLORS.primary,
+    justifyContent: 'center',
+    alignItems: 'center',
+    
+    
+    position: 'absolute',
+    top: 330
+  },
+
+  modalLower:{
+    margin: 20,
+    backgroundColor: COLORS.secondary,
+    borderRadius: 10,
+    padding: 35,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+    width: '100%', 
+    height: 400,
+    
+  },
+
+  modalViewLower:{
+    flex: 1,
+    paddingTop: 20,
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'flex-end'
+    
+  },
+
+  addPhotoIconContainer: {
+      width: 24,
+      height: 24,
+      justifyContent: "center",
+      alignItems: "center",
+      marginRight: 0,
+  },
+
+  backButton:{
+    width:30, 
+    height:30,
+    borderWidth:0,
+    backgroundColor: COLORS.secondary,
+  },
+
+  imageButtonsText:{
+    color: COLORS.primary
+  }
+
 
 
 });

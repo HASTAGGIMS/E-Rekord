@@ -3,7 +3,9 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "NodeNext",
-    "lib": ["es2017"],
+    "lib": [
+      "es2017"
+    ],
     "allowJs": true,
     "jsx": "react-native",
     "noEmit": true,
@@ -16,9 +18,15 @@
     "rootDir": ".",
     "baseUrl": ".",
     "paths": {
-      "@li/assets/*": ["src/assets/*"],
-      "@li/components/*": ["src/components/*"],
-      "@li/colors/*": ["src/theme/colors/*"]
+      "@li/assets/*": [
+        "src/assets/*"
+      ],
+      "@li/components/*": [
+        "src/components/*"
+      ],
+      "@li/colors/*": [
+        "src/theme/colors/*"
+      ]
     }
   },
   "exclude": [
@@ -26,5 +34,11 @@
     "babel.config.js",
     "metro.config.js",
     "jest.config.js"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
   ]
 }
